@@ -58,6 +58,9 @@ public class JwtUtils {
     }
 
     public boolean validateToken(String authToken) {
+        if (authToken == null || authToken.trim().isEmpty()) {
+            throw new IllegalArgumentException("CharSequence cannot be null or empty.");
+        }
         try {
             Jwts.parser().verifyWith((SecretKey) key())
                     .build().parseSignedClaims(authToken);
