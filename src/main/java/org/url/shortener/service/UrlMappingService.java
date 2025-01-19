@@ -44,7 +44,7 @@ public class UrlMappingService {
         Random random = new Random();
         StringBuilder shortUrl = new StringBuilder(8);
 
-        for(int i = 0;i < 8;i++) {
+        for(int i = 0;i < 12;i++) {
             shortUrl.append(characters.charAt(random.nextInt(characters.length())));
         }
         return shortUrl.toString();
