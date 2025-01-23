@@ -3,16 +3,20 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import LandingPage from './components/LandingPage'
 import AboutPage from "./components/AboutPage.jsx";
+import NavBar from './components/NavBar.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<LandingPage />}/>
-          <Route path='/about' element={<AboutPage />}/>
-      </Routes>
+      <NavBar />
+        <Routes>
+          <Route path='/' element={<LandingPage />}/>
+            <Route path='/about' element={<AboutPage />}/>
+        </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   )

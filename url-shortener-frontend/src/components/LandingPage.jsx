@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from './Card'
 
 const LandingPage = () => {
 
@@ -28,11 +29,35 @@ const LandingPage = () => {
 
           <div className="flex-1 flex justify-center w-full">
             <img
-                className="sm:w-[480] w-[480px] object-cover rounded-md"
-                src="/images/image1.jpg"
-                alt=""
-            />
+                className="sm:w-[320px] w-[240px] object-cover rounded-md"
+                src="src\images\image1.jpg"
+                alt="Linklytics illustration"
+              />
           </div>
+        </div>
+        <div className="sm:pt-12 pt-7">
+          <p className="text-slate-800 font-itatic font-bold lg:w-[60%] md:w-[80%] mx-auto">Why Linklytics?
+            Trusted by individulas and businesses worldwide
+          </p>
+          <div className="pt-4 pb-7 grid lg:gap-7 gap-4 xl:grid-cols-4  lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-4">
+          <Card
+            title="Simple URL Shortening"
+            desc="Experience the ease of creating short, memorable URLs in just a few clicks. Our intuitive interface and quick setup process ensure you can start shortening URLs without any hassle."
+          />
+          <Card
+            title="Powerful Analytics"
+            desc="Gain insights into your link performance with our comprehensive analytics dashboard. Track clicks, geographical data, and referral sources to optimize your marketing strategies."
+          />
+          <Card
+            title="Enhanced Security"
+            desc="Rest assured with our robust security measures. All shortened URLs are protected with advanced encryption, ensuring your data remains safe and secure."
+          />
+          <Card
+            title="Fast and Reliable"
+            desc="Enjoy lightning-fast redirects and high uptime with our reliable infrastructure. Your shortened URLs will always be available and responsive, ensuring a seamless experience for your users." 
+          />
+        </div>
+
         </div>
       </div>
   )
