@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './Card'
+import {motion} from 'framer-motion'
 
 const LandingPage = () => {
 
@@ -9,9 +10,14 @@ const LandingPage = () => {
       <div className="min-h-[calc(100vh-64px)]  lg:px-14 sm:px-8 px-4">
         <div className="lg:flex-row flex-col    lg:py-5   pt-16   lg:gap-10 gap-8 flex justify-between items-center">
           <div className="flex-1">
-            <h1 className='font-bold text-3xl text-slate-800 italic mb-3'>
+            <motion.h1 
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{once: true}}
+              transition={{duration: 0.8}}
+              className='font-bold text-3xl text-slate-800 italic mb-3'>
               Linklytics simplifies URL shortening for efficient sharing.
-            </h1>
+            </motion.h1>
             <p className='text-slate-700 text-sm my-5'>
               Easily generate, manage, and track your shortened links.
             </p>
