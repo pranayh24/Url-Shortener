@@ -1,23 +1,25 @@
 import { useState } from 'react'
 import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import LandingPage from './components/LandingPage'
 import AboutPage from "./components/AboutPage.jsx";
 import NavBar from './components/NavBar.jsx';
 import Footer from './components/Footer.jsx';
+import RegisterPage from './components/RegisterPage.jsx';
 
 function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <Router>
       <NavBar />
         <Routes>
           <Route path='/' element={<LandingPage />}/>
-            <Route path='/about' element={<AboutPage />}/>
+          <Route path='/about' element={<AboutPage />}/>
+          <Route path='/register' element={<RegisterPage />}/>
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </Router>
     </>
   )
 }
