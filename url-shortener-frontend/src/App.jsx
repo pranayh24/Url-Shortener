@@ -9,7 +9,7 @@ import RegisterPage from './components/RegisterPage.jsx';
 import { Toaster } from 'react-hot-toast';
 import LoginPage from './components/LoginPage.jsx';
 import { ContextProvider } from './contextApi/ContextApi';
-import DashboardLayout from './Dashboard/DashboardLayout.jsx';
+import DashboardLayout from './components/Dashboard/DashboardLayout.jsx';
 
 function App() {
   return (
