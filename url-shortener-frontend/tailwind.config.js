@@ -3,13 +3,13 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "custom-gradient": "linear-gradient(to right, #3b82f6, #9333ea)", // equivalent to from-blue-500 to-purple-600
-        "custom-gradient-2": "linear-gradient(to left, #3b82f6, #f43f5e)",
-        "card-gradient": "linear-gradient(to right, #38b2ac, #4299e1)",
+        "custom-gradient": "linear-gradient(to right, #1a1a1a, #333333)", // Dark gradient
+        "custom-gradient-2": "linear-gradient(to left, #1a1a1a, #333333)", // Dark gradient
+        "card-gradient": "linear-gradient(to right, #1a1a1a, #333333)", // Dark gradient
       },
       colors: {
-        navbarColor: "#ffffff",
-        btnColor: "#3364F7",
+        navbarColor: "#1a1a1a", // Dark color
+        btnColor: "#ff6347", // Example button color
         linkColor: "#2a5bd7",
       },
       boxShadow: {
