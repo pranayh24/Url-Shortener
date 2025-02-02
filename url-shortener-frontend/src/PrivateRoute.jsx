@@ -1,14 +1,12 @@
-import React from 'react'
-import ShortenItem from './ShortenItem'
+import { Navigate } from "react-router-dom";
+import { useStoreContext } from "./contextApi/ContextApi";
 
-const ShortenUrlList = ({ data }) => {
-  return (
-    <div className='my-6 space-y-4'>
-        {data.map((item) => (
-            <ShortenItem key={item.id} {...item} />
-        ))}
-    </div>
-  )
+export default function PrivateRoute({ children, publicPage}) {
+  const { token } = useStoreContext();
+
+  if (publicPage) {
+    return token ? <Navigate to="/dashboard" /> : children;
+  }
+
+  return !token ? <Navigate to="/login" /> : children;
 }
-
-export default ShortenUrlList
